@@ -10,4 +10,4 @@
 Все должно выглядеть внешне приятно. Данные должны загружаться с помощью AJAX из JSON-файла, лежащего на сервере.
  */
  
- React + Material-ui-next + Axios
+ react + react-dnd + material-ui-next + axios
