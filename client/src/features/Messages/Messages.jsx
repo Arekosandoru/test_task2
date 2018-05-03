@@ -154,22 +154,3 @@ Example.propTypes = {
 const styledComponent = withStyles(styles)(Example);
 
 export default DragDropContext(HTML5Backend)(styledComponent);
-
-const cloneObj = obj => {
-    return Object.keys(obj).reduce((dolly, key) => {
-        dolly[key] =
-            obj[key].constructor === Object ? cloneObj(obj[key]) : obj[key];
-        return dolly;
-    }, {});
-};
-
-/**
- * Задание:
-Необходимо разработать компонент для службы поддержки некоторого сайта. В левой части экрана показана таблица, 
-содержащая таблицу неотсортированных писем с колонками: Summary, From email, Date. 
-В правой части по вертикали (т.е. одна над другой) расположены три аналогичные таблицы с заголовками: Technical support, Marketing, CEO.
-Необходимо реализовать возможность перетаскивания писем из левой таблицы в любую из правых таблиц.
-В результате перетаскивания письмо должно исчезнуть из таблицы слева и появиться в последней строке выбранной таблицы справа.
-
-Все должно выглядеть внешне приятно. Данные должны загружаться с помощью AJAX из JSON-файла, лежащего на сервере.
- */
